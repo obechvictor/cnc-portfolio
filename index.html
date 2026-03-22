@@ -1,275 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Obech Victor Ouma | CNC Programmer Portfolio</title>
 
-<meta name="description" content="Obech Victor Ouma CNC programming portfolio showing machining projects, G-code samples and mechanical engineering experience.">
-<meta name="keywords" content="CNC programmer portfolio, CNC machining, G-code programming, CNC lathe projects, milling machining">
-<meta name="author" content="Obech Victor Ouma">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional CNC Programmer and Mechanical Engineering Portfolio. G-code, machining projects, and precision engineering.">
 
 <style>
 
-body{
-font-family:"Times New Roman", Times, serif;
-margin:0;
-background:#f0f0f0;
-color:#333;
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    background: #0f172a;
+    color: #e5e7eb;
 }
 
-header{
-background:#111;
-color:white;
-padding:40px;
-text-align:center;
+/* NAV */
+nav {
+    text-align: center;
+    background: #020617;
+    padding: 12px;
+}
+nav a {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav{
-background:#333;
-padding:12px;
-text-align:center;
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px;
+}
+header h1 { margin: 0; }
+
+/* SECTION */
+section { padding: 20px; }
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
+/* CARD */
+.card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(34,197,94,0.5);
 }
 
-.hero{
-background:#ddd;
-padding:50px;
-text-align:center;
+img {
+    width: 100%;
+    border-radius: 8px;
 }
 
-.container{
-width:90%;
-margin:auto;
+/* BUTTON */
+button {
+    background: #22c55e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
+button:hover { background: #16a34a; }
 
-.section{
-padding:40px 0;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:6px;
-box-shadow:0 2px 6px rgba(0,0,0,0.2);
-}
-
-.card img{
-width:100%;
-border-radius:4px;
-}
-
-code{
-background:#eee;
-display:block;
-padding:15px;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
+/* CONTACT */
+.contact {
+    text-align: center;
+    padding: 30px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-
-<h1>Obech Victor Ouma</h1>
-<p>CNC Programmer | Mechanical Engineer</p>
-
-</header>
-
+<!-- NAV -->
 <nav>
-
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#gcode">G-Code</a>
-<a href="#contact">Contact</a>
-
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<div class="hero">
+<!-- HEADER -->
+<header>
+    <h1>Victor Ouma</h1>
+    <p>CNC Programmer | Mechanical Engineer</p>
+</header>
 
-<h2>CNC Programming & Machining Portfolio</h2>
-
-<p>
-Experienced CNC machinist specialized in CNC lathe turning,
-milling operations and manual G-code programming.
-</p>
-
-</div>
-
-<div class="container">
-
-<section id="about" class="section">
-
+<!-- ABOUT -->
+<section id="about">
 <h2>About Me</h2>
-
 <p>
-I am a CNC programmer based in Nairobi, Kenya. My work focuses on
-precision machining using CNC lathes and milling machines.
+I am a CNC programmer and mechanical engineering enthusiast specializing in precision machining,
+G-code programming, and manufacturing processes. I create accurate and efficient machining solutions.
 </p>
 
-<p>
-I have experience in producing mechanical components such as stepped shafts,V-grooves,T-slots,Gear teeth
-threaded parts and milled pockets using CNC machining techniques.I also help in blue print drafting and interpretation.
-</p>
-
+<a href="cv.pdf" download>
+    <button>Download CV</button>
+</a>
 </section>
 
-<section id="skills" class="section">
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
 
-<h2>Technical Skills</h2>
+<div class="grid">
 
-<ul>
+<div class="card">
+<h3>Turned Bush</h3>
+<img src="turnedbush.jpg">
+<p>Precision CNC turned bush.</p>
 
-<li>CNC Lathe Programming</li>
-<li>Manual G-code Programming</li>
-<li>Precision Turning Operations</li>
-<li>Milling and Pocket Machining</li>
-<li>Thread Cutting</li>
-<li>Solid works,AutoCAD,and inventor 2D& 3D drawing</li>
-<li>Laser cutting</li>
-<li>CAD/CAM</li>
+<iframe width="100%" height="200"
+src="https://www.youtube.com/embed/iPCzvWkh2Po"
+allowfullscreen>
+</iframe>
 
-</ul>
+<br><br>
 
-<h3>Machines Used</h3>
-
-<ul>
-
-<li>CK6150 CNC Lathe with GSK control system</li>
-<li>Vertical Machining Center</li>
-<li>Power Press Machines</li>
-<li>CNC Laser plasma cutting (2D cut)</li>
-  
-</ul>
-
-</section>
-
-<section id="projects" class="section"><h2>My CNC Projects</h2>
-
-<div class="project">
-  <h3>Turned Bush</h3>
-  <img src="images/cnc-turning.jpg" width="300">
-  <p>Precision CNC turned bush with fine surface finish.</p>
-</div>
-
-<div class="project">
-  <h3>V-grooved Gate roller Turning</h3>
-  <img src="images/v-groovedgateroller.jpg" width="300">
-  <p>High precision machined gate roller using CNC lathe.</p>
-</div>
-
-<div class="project">
-  <h3>Milling Component</h3>
-  <img src="images/millingpart.jpg" width="300">
-  <p>Face milling and slot cutting operation.</p>
+<a href="turnedbush.nc" download>
+<button>Download G-Code</button>
+</a>
 </div>
 
 <div class="card">
+<h3>Thread Cutting</h3>
+<p>Accurate thread machining using CNC lathe.</p>
+</div>
 
-<img src="images/milling.jpg" alt="CNC milling pocket">
-
-<h3>Pocket Milling</h3>
-
-<p>
-Aluminum pocket milled using vertical machining center.
-</p>
+<div class="card">
+<h3>Milling Component</h3>
+<p>Slotting and surface finishing using CNC milling.</p>
+</div>
 
 </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+
+<div class="grid">
+
+<div class="card">CNC Lathe Programming</div>
+<div class="card">G-Code Programming</div>
+<div class="card">Milling Operations</div>
+<div class="card">Thread Cutting</div>
+<div class="card">Machine Setup</div>
+<div class="card">CAD/CAM</div>
 
 </div>
 
 </section>
-<h3>CNC Machining Video</h3>
 
-<iframe width="100%" height="250"
-src="https://www.youtube.com/embed/iPCzvWkh2Po"
-title="CNC machining video"
-frameborder="0"
-allowfullscreen>
-</iframe>
-  
-frameborder="0"
-allowfullscreen>
-  </iframe>
-<section id="gcode" class="section">
+<!-- CONTACT -->
+<div id="contact" class="contact">
+<h2>Contact Me</h2>
+<p>Email: obechvictor0@gmail.com</p>
 
-<h2>Sample CNC G-Code</h2>
-
-<code>
-
-G21  
-G90  
-G00 X50 Z5  
-G01 X0 Z-20 F0.2  
-G00 X60  
-M30  
-
-</code>
-
-<p>
-Download more CNC programs from the repository.
-</p>
-
-</section>
-
-<section id="contact" class="section">
-
-<h2>Contact</h2>
-
-<p>
-Email:
 <a href="mailto:obechvictor0@gmail.com">
-obechvictor0@gmail.com
+<button>Hire Me</button>
 </a>
-</p>
-
-<p>
-GitHub:
-<a href="https://github.com/obechvictor">
-github.com/obechvictor
-</a>
-</p>
-
-<p>
-Location: Nairobi, Kenya
-</p>
-
-</section>
-
 </div>
-
-<footer>
-
-<p>© 2026 Obech Victor Ouma | CNC Programming Portfolio</p>
-
-</footer>
 
 </body>
-
 </html>
