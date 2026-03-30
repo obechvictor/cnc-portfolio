@@ -1,265 +1,283 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E4JGCEGWSV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  gtag('config', 'G-E4JGCEGWSV');
-</script>
-    
 <title>Obech Victor Precision Machining | CNC Programmer Kenya</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CNC Programmer in Kenya specializing in G-code, turning, milling and precision machining.">
-<meta name="keywords" content="CNC programmer Kenya, G-code, CNC machining, turning, milling">
-<meta name="author" content="Obech Victor Ouma">
-<meta name="robots" content="index, follow">
-  
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E4JGCEGWSV"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-E4JGCEGWSV');
+</script>
+
 <style>
-
-html { scroll-behavior: smooth; }
-
 body {
-    font-family: "Times New Roman", serif;
-    margin: 0;
-    background: #0f172a;
-    color: #e5e7eb;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
-/* NAV */
-nav {
-    text-align: center;
-    background: #020617;
-    padding: 12px;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #111;
+  color: white;
+  padding: 10px 20px;
 }
-nav a {
-    margin: 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* HEADER */
-header {
-    text-align: center;
-    padding: 30px;
-}
-header img {
-    width: 100px;
+.navbar a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
-/* SECTION */
-section {
-    padding: 20px;
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #222, #444);
+  color: white;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #ff6600;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  max-width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* BUTTONS */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* DOTS */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 4px;
+  background: #ccc;
+  display: inline-block;
+  border-radius: 50%;
+}
+.dot.active {
+  background: white;
 }
 
 /* CARD */
 .card {
-    background: #1e293b;
-    padding: 15px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-.card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(34,197,94,0.5);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-img {
-    width: 100%;
-    border-radius: 8px;
+/* HOVER */
+.slide:hover {
+  transform: scale(1.05);
+  transition: 0.4s;
 }
 
-/* BUTTON */
-button {
-    background: #22c55e;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+/* FULLSCREEN */
+.fullscreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
 }
-button:hover {
-    background: #16a34a;
+.fullscreen img {
+  max-width: 90%;
+  max-height: 90%;
 }
 
 /* CONTACT */
-.contact {
-    text-align: center;
-    padding: 30px;
+#contact {
+  text-align: center;
+  padding: 30px;
 }
 
+/* DARK MODE */
+.dark {
+  background: #111;
+  color: white;
+}
 </style>
-
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2>OBECH CNC</h2>
+  <div>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button onclick="toggleMode()">🌙</button>
+  </div>
 </nav>
 
-<!-- HEADER -->
-<header>
-<img src="logo.png" alt="OBECH CNC Logo">
-<h1>OBECH VICTOR Precision Machining</h1>
-<p>CNC Programming | Turning | Milling | G-Code Specialist</p>
-<head>
-  <title>Obech Victor CNC Portfolio</title>
-  
-    
-</head>
-<a href="cv.pdf" download>
-<button>Download CV</button>
-</a>
+<!-- HERO -->
+<section class="hero">
+  <h1>Precision CNC Machining & G-Code Programming</h1>
+  <p>Turning • Milling • Threading</p>
 
-<br><br>
-
-<a href="https://www.linkedin.com/in/obech-victor-536777206" target="_blank">
-<button style="background:#0A66C2;">Visit LinkedIn</button>
-</a>
-
-</header>
-
-<!-- ABOUT -->
-<section id="about">
-<h2>About Me</h2>
-<p>
-I am a professional CNC programmer and mechanical engineer based in Kenya specializing in G-code programming, turning, milling, and precision machining.
-</p>
+  <a href="cv.pdf" download class="btn">Download CV</a>
+  <a href="turnedbush.nc" download class="btn">Download G-Code</a>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-<h2>Projects</h2>
+  <h2 style="text-align:center;">My CNC Projects</h2>
 
-<div class="grid">
+  <div class="card">
+    <h3>Turned Bush Project</h3>
 
-<div class="card">
-<h3>Turned Bush</h3>
-<img src="images/turnedbush.jpg" alt="CNC turning bush Kenya">
+    <div class="slider" id="slider">
+      <img src="images/turnedbush.jpg" class="slide active">
+      <img src="images/turned-gatehandle.jpg" class="slide">
+      <img src="images/v-groovedrollers.jpg" class="slide">
 
-<p>Precision CNC turned component with high surface finish.</p>
-    
-<a href="turnedbush.nc" download>
-<button>Download G-Code</button>
-</a>
-    
-<div class="card">
-<h3>Turned Gate handle</h3>
-<img src="images/turned-gatehandle.jpg" alt="CNC gate handle production in Kenya">
-    
-<p>High quality gate handle production in Kenya with super machining finish.</p>
-    
-<a href="turnedgatehandle.nc" download>
-<button>Download G-Code</button>
-</a>
-    
-<div class="card">
-<h3>V-grooved Gate roller</h3>
-<img src="images/v-groovedrollers.jpg" alt="CNC gate rollers production in Kenya">
+      <button class="prev" onclick="prevSlide()">❮</button>
+      <button class="next" onclick="nextSlide()">❯</button>
 
-<p>High quality and precisely machined gate roller</p>
-
-<p>Gate roller production video clip</p> 
-    
-<iframe width="100%" height="200"
-src="https://www.youtube.com/embed/iPCzvWkh2Po"
-style="border-radius:10px;"
-allowfullscreen>
-</iframe>
-
-<br><br>
-
-<a href="turnedbush.nc" download>
-<button>Download G-Code</button>
-</a>
-
-<p>Turning a door bush on a GSK controlled CNC lathe</p>
-    
- <div style="margin-top:15px;">
-  <iframe width="100%" height="250"
-  src="https://www.youtube.com/embed/iNA-kcpK0cM"
-  title="CNC machining video"
-  style="border-radius:12px;"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-  </iframe>
-    
-</div>
-
+      <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-<h2>Skills</h2>
-
-<div class="grid">
-<div class="card">CNC Programming</div>
-<div class="card">G-Code</div>
-<div class="card">Turning</div>
-<div class="card">Milling</div>
-<div class="card">AutoCAD</div>
-<div class="card">SolidWorks</div>
+<!-- FULLSCREEN -->
+<div id="fullscreen" class="fullscreen" onclick="closeFullscreen()">
+  <img id="fullscreen-img">
 </div>
-
-</section>
-
-<!-- SERVICES -->
-<section>
-<h2>Services</h2>
-
-<div class="grid">
-<div class="card">CNC Programming</div>
-<div class="card">Precision Machining</div>
-<div class="card">Machine Setup</div>
-<div class="card">Engineering Support</div>
-</div>
-
-</section>
 
 <!-- CONTACT -->
-<div id="contact" class="contact">
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Phone: +254757608301</p>
+  <p>Email: obechvictor0@gmail.com</p>
 
-<h2>Contact Me</h2>
+  <a href="https://www.linkedin.com/in/obech-victor-536777206" target="_blank">
+    LinkedIn Profile
+  </a>
+</section>
 
-<p>Email: obechvictor0@gmail.com</p>
-<p>Phone: +254757608301</p>
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
 
-<a href="mailto:obechvictor0@gmail.com">
-<button>Hire Me</button>
-</a>
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    dots[i].classList.remove('active');
+  });
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+}
 
-<br><br>
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/obech-victor-536777206" target="_blank">
-View Profile
-</a>
-<p>
-<a href="https://wa.me/254757608301">
-<button style="background:green;">WhatsApp Me</button>
-</a>
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
 
-</div>
-<footer style="text-align:center; padding:20px; background:#020617;">
-<p>© 2026 OBECH Precision Machining</p>
-    
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 4000);
+
+/* SWIPE */
+let startX = 0;
+const slider = document.getElementById('slider');
+
+slider.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+
+  if (startX - endX > 50) nextSlide();
+  else if (endX - startX > 50) prevSlide();
+});
+
+/* FULLSCREEN */
+slides.forEach(slide => {
+  slide.addEventListener('click', () => {
+    document.getElementById('fullscreen').style.display = 'flex';
+    document.getElementById('fullscreen-img').src = slide.src;
+  });
+});
+
+function closeFullscreen() {
+  document.getElementById('fullscreen').style.display = 'none';
+}
+
+/* DARK MODE */
+function toggleMode() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
 </body>
-    </html>
+      </html>
