@@ -144,28 +144,38 @@ section {
   color: black;
 }
 .ba-slider {
+
   position: relative;
-  max-width: 300px;
-  margin: 4px auto;
+  width: 100%;
+  max-width: 500px;   /* bigger = clearer images */
+  margin: 20px auto;
   overflow: hidden;
   border-radius: 15px;
+
 }
 .ba-slider img {
   width: 100%;
+  height: 220px;        /* controls size */
+  object-fit: cover;    /* makes all images same size */
+  display: block;
+
 }
-.resize {
-  position: absolute;
+.resize img {
   width: 100%;
-  overflow: hidden;
+  height: 220px;
+  object-fit: cover;
+ 
 }
 .handle {
   position: absolute;
   left: 50%;
-  width: 100px;
+  top: 0;
+  width: 3px;
   height: 100%;
   background: white;
+  cursor: ew-resize;
   
-  }
+}
 /* FULLSCREEN */
 .fullscreen {
   display: none;
