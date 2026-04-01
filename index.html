@@ -154,18 +154,15 @@ section {
 /* GRID FIX */
 .ba-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
 }
 
-/* CARD */
-.ba-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  background: #1e293b;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
+.ba-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  }
 
 /* IMAGE FIX (VERY IMPORTANT) */
 .ba-card img {
